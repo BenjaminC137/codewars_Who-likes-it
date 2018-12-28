@@ -23,16 +23,24 @@ function likes(names) {
 		return (names[0] + ' ' + 'likes this');
 	}
 	if(names.length == 3){
-		for(var i = 0; i < (names.length - 1); i++){
-			namesString = namesString + ', ' + names[i];
-		}
-		return(namesString + ' ' + 'and' + ' ' + names[i] + ' ' + 'like this');
+//		for(var i = 0; i < (names.length - 1); i++){
+//			namesString = namesString + ', ' + names[i];
+//		}
+//		return(namesString + ' ' + 'and' + ' ' + names[i] + ' ' + 'like this');
+		namesString = namesString + names[0];
+		namesString = namesString + ',' + ' ' + names[1];
+		namesString = namesString + ' ' + 'and' + ' ' + names[2];
+		return(namesString);
 	}
 	else{
-		for(var i = 0; i < (names.length - 1); i++){
-			namesString = namesString + ', ' + names[i];
-		}
-		return(namesString + ' ' + 'and' + ' ' + (names.length - 2) + ' others like this');
+//		for(var i = 0; i < (names.length - 1); i++){
+//			namesString = namesString + ', ' + names[i];
+//		}
+//		return(namesString + ' ' + 'and' + ' ' + (names.length - 2) + ' others like this');
+		namesString = namesString + names[0];
+		namesString = namesString + ',' + ' ' + names[1];
+		namesString = namesString + ' ' + 'and' + ' ' + (names.length - 2) + ' ' + 'others like this';
+		return(namesString);
 	}
 }
 
